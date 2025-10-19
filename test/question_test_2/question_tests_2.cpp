@@ -6,7 +6,12 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("test")
-{
-	REQUIRE(test_config() == true);
+TEST_CASE("roll_die returns values between 1 and 6 inclusive", "roll_die") {
+	const int num_trials = 1000; // Number of times to roll the die for testing
+
+	for (int i = 0; i < num_trials; ++i) {
+		int roll = roll_die();
+		REQUIRE(roll >= 1);
+		REQUIRE(roll <= 6);
+	}
 }

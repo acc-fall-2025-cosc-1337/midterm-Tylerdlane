@@ -1,6 +1,8 @@
 #include "question2.h"
 
-bool test_config()
+#include <cstdlib>
+
+int roll_die()
 {
-    return true;
+    return rand() % 6 + 1;
 }
